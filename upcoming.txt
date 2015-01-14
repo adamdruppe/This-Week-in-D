@@ -1,0 +1,44 @@
+=== NEXT WEEK ===
+
+http://philpax.me/blog/heady-house-hunting-with-d
+
+=== BIGGER LONG TERM STUFF ===
+
+DConf special edition is probably going to be a bit of a blow-out
+and we can talk about dconf for weeks later too. I should ask
+the speakers to summarize their stuff and I can see about writing
+it as the conference is ongoing.
+
+Maybe right before DConf 2015, we'll do a look back at DConf 2014
+as a special section too. "This week, we're preparing for DConf so
+let's take this opportunity to talk about the previous ones!")
+
+=== BACKLOG ===
+
+Tip ideas:
+
+Orvid_: "Remember, `foreach (dchar c; str)` and `foreach (c; str)` do different things?" 
+	* auto decoding in phobos too
+
+sleek: uniform function call syntax is a fun one
+	* I can talk about the encapsulation thing and prolly mention
+	what `private` means too while I'm at it.
+
+html parsing - the C++ link extraction thread and dom.d
+	http://stackoverflow.com/questions/27943342/how-to-extract-only-first-match-with-regexp/27947350#27947350
+
+Actually, I think HTML counts as a bit of a FAQ, maybe I'll put
+it in there and then save room for other things.
+
+Project spotlights:
+
+I can talk about a LOT of my stuff for a long time
+	dom.d
+	http2.d
+	simpledisplay.d + simpleaudio.d + joystick.d
+	jsvar.d
+	database.d
+	cgi.d
+
+	the list goes on. And my larger projects like terminalemulator
+	and inspector or the taskbar could be in too.

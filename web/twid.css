@@ -1,0 +1,46 @@
+html, body {
+	margin: 0px;
+	padding: 0px;
+	font-family: sans-serif;
+	background-color: #f8f8f8;
+}
+
+#body-container {
+	max-width: 800px;
+	margin: 10px auto;
+
+	padding: 2px 6px;
+	border: solid 3px #e8e8e8;
+	background-color: white;
+}
+
+.tip {
+	margin: 1em;
+	padding: 1em;
+	border: dashed 1px #ccc;
+	background-color: #f2f2f2;
+}
+
+.pitfall {
+	margin: 1em;
+	padding: 1em;
+	border: ridge 1px #ccc;
+	background-color: #fff2f2;
+}
+
+
+.d-logo {
+	vertical-align: middle;
+}
+
+a:visited {
+	color: green;
+}
+
+h1 {
+	border-bottom: double 3px #ccc;
+}
+
+h2 {
+	border-bottom: solid 1px #ccc;
+}

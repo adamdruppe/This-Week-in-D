@@ -1,0 +1,251 @@
+Ddoc
+
+$(H1 This week in the D Programming Language)
+
+$(P Welcome to $(LOGO This Week in D)! Each week, we'll summarize what's been going on in the D community and write brief advice columns to help you get the most out of the D Programming Language.)
+
+$(P $(LINK2 http://dlang.org/, The D Programming Language) is a general purpose programming language that offers modern convenience, modeling power, and native efficiency with a familiar C-style syntax.)
+
+$(P This is the first edition of $(LOGO This Week in D) and we're looking for help and feedback. Any suggestions for style, visual design, or content are welcome!)
+
+$(P $(LOGO This Week in D) is edited by $(LINK2 mailto:destructionator+dweek@gmail.com, Adam D. Ruppe). Contact me with any questions, comments, or contributions.)
+
+$(H2 Statistics)
+
+$(LIST
+	$(LINK2 https://issues.dlang.org/buglist.cgi?list_id=179422&resolution=FIXED&chfieldto=2015-01-11&chfield=bug_status&query_format=advanced&chfieldfrom=2015-01-04&chfieldvalue=RESOLVED&bug_status=RESOLVED, 22 bugs fixed),
+
+	$(LINK2 https://issues.dlang.org/buglist.cgi?list_id=179423&resolution=---&chfieldto=2015-01-11&chfield=[Bug%20creation]&query_format=advanced&chfieldfrom=2015-01-04&bug_status=NEW, 25 bugs added),
+
+	$(LITERAL
+		90 pull requests merged into the language:
+
+		$(LINK2 https://github.com/D-Programming-Language/dmd/pulls?q=is%3Apr+is%3Amerged+updated%3A2015-01-04..2015-01-15, 41 into DMD),
+		$(LINK2 https://github.com/D-Programming-Language/phobos/pulls?q=is%3Apr+is%3Amerged+updated%3A2015-01-04..2015-01-15, 31 into Phobos), and
+		$(LINK2 https://github.com/D-Programming-Language/druntime/pulls?q=is%3Apr+is%3Amerged+updated%3A2015-01-04..2015-01-15, 18 into druntime ).)
+)
+
+$(H2 Major Changes)
+
+$(LIST
+	DDoc in git master dmd now supports `backticked inline code` with escaping.,
+
+	$(LINK2
+		https://github.com/D-Programming-Language/dlang.org/commit/1a0ee6b81aca5f768f78108b1b9300633bddf18f,
+		The garbage collector can now be configured through the command line, the environment or by options embedded into the executable.),
+
+	$(D volatileLoad) and $(D volatileStore) intrinsics were added.,
+
+	Built-in associative arrays now have a $(D .byKeyValue) method that returns a forward range iterating over key/value pairs.
+)
+$(H2 Project Spotlight)
+	$(P The spotlight this week is on this publication, $(LINK2 http://arsdnet.net/this-week-in-d/, $(LOGO This Week in D)).)
+	$(P $(LOGO This Week in D) is written in $(LINK2 http://dlang.org/ddoc.html, Ddoc) and is about all things D, with the blessing of Walter Bright and Andrei Alexandrescu. It is a new project, and thus may still be a little rough around the edges - contributions are always welcome.)
+
+	$(P It wants to be more than just a collection of statistics and links. $(LOGO This Week in D) should be an interesting read for casual observers and experienced D users alike, with a weekly tip column and project spotlight from me or the community to help get the word out about what you're working in on D.)
+
+	$(P $(LOGO This Week in D) keeps its reader appraised about what's going on in D's whole ecosystem!)
+
+	$(P Want your project featured here? Prepare a link and write up a few paragraphs about it, then $(LINK2 mailto:destructionator+dweek@gmail.com, contact me)! Your project does not have to be complete to be featured - we like works-in-progress too.)
+
+$(H2 In the community)
+
+$(H3 DConf 2015 announced!)
+
+$(P $(LINK2 http://dconf.org/2015/index.html, DConf 2015) will be held at Utah Valley University in Orem, Utah, from May 27, 2015 through May 29, 2015!)
+
+$(P $(LINK2 http://forum.dlang.org/thread/m8pg3j$(DOLLAR)26ba$(DOLLAR)1@digitalmars.com, UVU is sponsoring DConf 2015) and the conference organizers are $(LINK2 http://dconf.org/2015/index.html, looking for talk submissions now).)
+
+$(P Hope to see you there!)
+
+$(H3 Community announcements)
+
+$(LIST
+
+	$(LINK2 http://forum.dlang.org/thread/weodkqwxrqetvolhbghb@forum.dlang.org, GCCJIT Bindings for D),
+
+	$(LINK2 http://forum.dlang.org/thread/ywtsrevlfecerpopjiig@forum.dlang.org, Bindings for libmRSS: for parsing, writing and creating RSS/ATOM files or streams.),
+
+	$(LINK2 http://forum.dlang.org/thread/hapeegrotkazppwdnstk@forum.dlang.org, DOtherSide: QML bindings for both D and Nim),
+
+	$(LINK2 http://forum.dlang.org/thread/baffupjujyjremacoxky@forum.dlang.org, Gource visualisations of various D repositories),
+
+	$(LINK2 http://forum.dlang.org/thread/fhixatmgqeymkepvlior@forum.dlang.org, D bindings and high level wrapper for systemd journal),
+
+	$(LINK2 http://forum.dlang.org/thread/m8bdul$(DOLLAR)1dke$(DOLLAR)1@digitalmars.com, DMD's lexer available on code.dlang.org),
+
+	$(LINK2 http://forum.dlang.org/thread/szqsscsvcbpjjeelkpve@forum.dlang.org, DlangUI project update),
+
+	$(LINK2 http://forum.dlang.org/thread/m8ibci$(DOLLAR)f8t$(DOLLAR)1@digitalmars.com, Sargon library gets Ddoc macro processor),
+
+	$(LINK2 http://forum.dlang.org/thread/eycxjdxgsraxtobkeijt@forum.dlang.org, We're looking for a Software Developer! (D language)),
+
+	$(LINK2 http://forum.dlang.org/thread/m84g13$(DOLLAR)ci1$(DOLLAR)1@digitalmars.com, Visual D 0.3.40 released),
+
+	$(LINK2 http://forum.dlang.org/thread/pzbudftwgbdptnseonmy@forum.dlang.org, &#x2205;MQD 1.0.0-alpha released - now with full &#x2205;MQ 4.0 support),
+
+	$(LINK2 http://forum.dlang.org/thread/sqcqenpkxufgjxzraonp@forum.dlang.org, We're looking for a Linux Systems Admin!),
+
+	$(LINK2 http://forum.dlang.org/thread/zbqcagfbicgsjgrfxcdx@forum.dlang.org, D port of the Dynamic Window Manager (DWM)),
+
+	$(LINK2 http://forum.dlang.org/thread/avvtftyekvfrqsmdiuup@forum.dlang.org, D idioms list)
+
+)
+
+	$(P See more at $(LINK2 http://forum.dlang.org/group/digitalmars.D.announce, digitalmars.D.announce).)
+
+$(H3 Significant Forum Discussions)
+
+	$(LIST
+		$(LINK2 http://forum.dlang.org/thread/tqegmjcofcnwapqitrdo@forum.dlang.org, For those ready to take the challenge),
+
+		$(LINK2 http://forum.dlang.org/thread/m7ns90$(DOLLAR)16t1$(DOLLAR)1@digitalmars.com, DIP25 - ref revamp proposal),
+
+		$(LINK2 http://forum.dlang.org/thread/mailman.3926.1420094321.9932.digitalmars-d@puremagic.com, Phobos colour module?),
+
+		$(LINK2 http://forum.dlang.org/thread/mailman.4367.1420795702.9932.digitalmars-d@puremagic.com, NaCl/Emscripten),
+
+		$(LINK2 http://forum.dlang.org/thread/vlzwhhymkjgckgyoxlrq@forum.dlang.org, @api: One attribute to rule them All),
+
+		$(LINK2 http://forum.dlang.org/thread/piyaqxrqkajiylfzcxut@forum.dlang.org, Game development),
+
+		$(LINK2 http://forum.dlang.org/thread/eeywxusjhcapltfswqxz@forum.dlang.org, Is it possible to collect object usage information during compilation?),
+
+		$(LINK2 http://forum.dlang.org/thread/okuzksqzczprvuklpzaw@forum.dlang.org, An idea for commercial support for D),
+
+		$(LINK2 http://forum.dlang.org/thread/m8hof1$(DOLLAR)2q4o$(DOLLAR)1@digitalmars.com, Ready to make page-per-item ddocs the default?),
+
+		$(LINK2 http://forum.dlang.org/thread/wrlasjtoazqilqcygyww@forum.dlang.org, GSOC - Holiday Edition),
+
+		$(LINK2 http://forum.dlang.org/thread/m8s1dr$(DOLLAR)24lp$(DOLLAR)1@digitalmars.com, Is anyone working on a D source code formatting tool?),
+
+		$(LINK2 http://forum.dlang.org/thread/dpweryxnhcrrpxmniwkm@forum.dlang.org, Thoughts on replacement languages (Reddit + D)),
+
+		$(LINK2 http://forum.dlang.org/thread/m90s0u$(DOLLAR)1a2a$(DOLLAR)1@digitalmars.com, Good post about out-of-the-box experience with D),
+
+		$(LINK2 http://forum.dlang.org/thread/m8tkfm$(DOLLAR)ret$(DOLLAR)1@digitalmars.com, Why exceptions for error handling is so important)
+	)
+
+	$(P See more at $(LINK2 http://forum.dlang.org/, forum.dlang.org) and keep up with community blogs at $(LINK2 http://planet.dsource.org/, Planet D).)
+
+<!-- I don't think there's any good faqs right now, none that I remember anyway
+$(H2 FAQs) -->
+
+$(H2 Tip of the week)
+
+	$(P This week, we'll look at how to $(B use a custom class allocator at the call site).)
+
+	$(P Class objects in D are typically allocated with the `new` operator:)
+
+	---
+		// classes are reference types, so they must be
+		// initialized. "MyClass c;", unlike in C++, would
+		// leave c as null, causing a segfault when you try
+		// to use it.
+		//
+		// The normal way to initialize a class is with new:
+		MyClass c = new MyClass(args...);
+	---
+
+	$(P There are times when you won't want to do that, however, such as
+	    when you are avoiding the garbage collector or wanting to use
+	    a custom allocator.)
+
+	$(TIP You can also avoid the garbage collector in your critical loop
+	      by pre-allocating your objects before entering the main loop of
+	      your program, then reusing those objects as needed. )
+
+	$(P The alternative to `new` is to do it yourself: allocate the memory
+	    yourself, then call `std.conv.emplace` to perform a placement new
+	    in that memory. You can allocate the memory with `malloc` for C
+	    style heap memory, or as a static array to place it on the stack:)
+
+	---
+		import std.conv : emplace;
+
+		ubyte[__traits(classInstanceSize, YourClass)] buffer;
+
+		YourClass obj = emplace!YourClass(buffer[], ctor args...);
+		// Destroy the object explicitly at scope exit, which will
+		// call the destructor deterministically.
+		scope(exit) .destroy(obj);
+
+		// use obj normally here
+	---
+
+	$(P The `__traits(classInstanceSize, YourClass)` portion is important: it tells you the size of a class object. `YourClass.sizeof` won't work because classes are reference types. It will return the size of the underlying pointer instead of the object itself!)
+
+	$(P Once your memory is allocated, you can place the class there then proceed to use it normally. The static array and scope guard will imitate C++'s class behavior in D - allocated on the stack and destroyed when it goes out of scope.)
+
+	$(PITFALL Wrapping class references in structs for automatic management 
+		  is possible, but difficult to get correct when faced with
+		  inheritance. Thus, you'll probably use regular class
+		  references. When passing them around, be sure not to store
+		  those references improperly. Without the garbage collector,
+		  you're back in the world of manual memory management, which
+		  means you are responsible to get it right yourself!)
+
+	$(P Want to learn more about the library function? Check out the $(LINK2 https://github.com/D-Programming-Language/phobos/blob/master/std/conv.d#L3907, `emplace` source code).)
+
+	$(HR)
+
+	$(P Find more D tips at the $(LINK2 http://p0nce.github.io/d-idioms/, D idioms list) or buy my $(LINK2 https://www.packtpub.com/application-development/d-cookbook, D Cookbook) for a more in-depth examination many D tricks.)
+
+	$(P If you'd like to submit a tip, $(LINK2 mailto:destructionator+dweek@gmail.com, email me).)
+
+
+
+$(H2 New people and projects)
+
+	$(P Would you like to introduce yourself or your project? Let me know! Post to $(LINK2 http://forum.dlang.org/group/digitalmars.D.announce, the D announcements forum) or $(LINK2 mailto:destructionator+dweek@gmail.com, email me privately).)
+
+$(H2 Upcoming events)
+
+	$(LIST
+		$(LINK2 http://forum.dlang.org/thread/m8dfgb$(DOLLAR)qfv$(DOLLAR)1@digitalmars.com, Walter Bright will be presenting at NWCPP on Jan 21 at Microsoft),
+
+		$(LINK2 http://dconf.org/, DConf 2015 will be starting on May 27 in Orem, UT)
+	)
+
+$(H2 Learn more about D)
+	$(P To learn more about D and what's happening in D:)
+	
+	$(LIST
+		Read $(LINK http://dlang.org) and the $(LINK2 http://wiki.dlang.org, D wiki).,
+
+		Want in-depth material? Check out the $(LINK2 http://wiki.dlang.org/Books, Books on D).,
+
+		Join us on IRC: channel #d on irc.freenode.net.,
+
+		Check out the $(LINK2 http://forum.dlang.org/, forums) (TIP - check out the NNTP and mailing list links under "Also via" on the forum to subscribe to email updates or access the forum with a newsgroup client!),
+
+		Follow $(LINK2 https://twitter.com/D_Programming, D Programming ) on Twitter, search for $(LINK2 https://twitter.com/search?q=%23dlang&src=typd, #dlang) on Twitter, and/or follow $(LINK2 https://twitter.com/adamdruppe, $(I This Week in D)'s editor on Twitter).,
+
+		Check out the $(LINK2 http://stackoverflow.com/questions/tagged/d, D tag on Stack Overflow)
+	)
+
+Macros:
+	H2=<h2>$0</h2>
+	H3=<h3>$0</h3>
+	LIST=<ul><li>$1</li>$(LIST_HELPER $+)</ul>
+	LIST_HELPER=<li>$1</li>$(LIST_HELPER $+)
+	D=<tt>$0</tt>
+	LOGO=<i>$0</i>
+	DDOC=<!DOCTYPE html><html><head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="twid.css" />
+		<title>$(TITLE)</title>
+		</head><body>
+			<div id="body-container">
+				<h1>
+				<img class="d-logo" src="http://dlang.org/images/dlogo.png" />
+				$(TITLE)</h1>
+				$(BODY)
+			</div>
+		</body></html>
+
+	TITLE=This Week in D: January 12, 2015
+	LITERAL=$0
+	TIP=<div class="tip">$0</div>
+	PITFALL=<div class="pitfall">$0</div>
+	D_INLINECODE=<tt>$0</tt>

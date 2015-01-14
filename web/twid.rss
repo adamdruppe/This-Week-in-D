@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+	<title>This Week in D</title>
+	<description>A weekly newsletter about what's going on in the D Programming Language</description>
+	<link>http://arsdnet.net/this-week-in-d/</link>
+	<lastBuildDate>Mon, 12 Jan 2015 22:00:00 -0400</lastBuildDate>
+	<pubDate>Mon, 12 Jan 2015 22:00:00 -0400</pubDate>
+	<ttl>5000</ttl>
+
+	<item>
+		<title>Issue #1</title>
+		<author>destructionator+dweek@gmail.com</author>
+		<description>First issue of This Week in D</description>
+		<link>http://arsdnet.net/this-week-in-d/jan-12.html</link>
+		<guid isPermaLink="false">http://arsdnet.net/this-week-in-d/jan-12.html</guid>
+		<pubDate>Mon, 12 Jan 2015 22:00:00 -0400</pubDate>
+	</item>
+
+</channel>
+</rss>
