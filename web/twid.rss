@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0"><channel><title>This Week in D</title><description>A weekly newsletter about what's going on in the D Programming Language</description><link href="http://arsdnet.net/this-week-in-d/" /><ttl>5000</ttl><lastBuildDate>2015-01-12T12:00:00</lastBuildDate><item><title>Issue #1</title><author>destructionator+dweek@gmail.com</author><link href="http://arsdnet.net/this-week-in-d/jan-12.html" /><pubDate>Mon, 12 Jan 2015 12:00:00 GMT</pubDate><description>&lt;html&gt;&lt;head&gt;
-		&lt;meta charset=&quot;UTF-8&quot; /&gt;
-		&lt;link rel=&quot;stylesheet&quot; href=&quot;twid.css&quot; /&gt;
-		&lt;title&gt;This Week in D: January 12, 2015&lt;/title&gt;
-		&lt;/head&gt;&lt;body&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>This Week in D</title><description>A weekly newsletter about what's going on in the D Programming Language</description><link>http://arsdnet.net/this-week-in-d/</link><ttl>5000</ttl><atom:link rel="self" type="application/rss+xml" href="http://arsdnet.net/this-week-in-d/twid.rss"></atom:link><lastBuildDate>Mon, 12 Jan 2015 12:00:00 GMT</lastBuildDate><item><title>Issue #1</title><author>destructionator+dweek@gmail.com (Adam D. Ruppe)</author><link>http://arsdnet.net/this-week-in-d/jan-12.html</link><guid>http://arsdnet.net/this-week-in-d/jan-12.html</guid><pubDate>Mon, 12 Jan 2015 12:00:00 GMT</pubDate><description>
 			&lt;div id=&quot;body-container&quot;&gt;
 				&lt;h1&gt;
 				&lt;img class=&quot;d-logo&quot; src=&quot;http://dlang.org/images/dlogo.png&quot; /&gt;
@@ -188,11 +184,7 @@
 
 
 			&lt;/div&gt;
-		&lt;/body&gt;&lt;/html&gt;</description></item><item><title>Issue #2</title><author>destructionator+dweek@gmail.com</author><link href="http://arsdnet.net/this-week-in-d/jan-18.html" /><pubDate>Sun, 18 Jan 2015 12:00:00 GMT</pubDate><description>&lt;html&gt;&lt;head&gt;
-	&lt;meta charset=&quot;UTF-8&quot; /&gt;
-	&lt;link rel=&quot;stylesheet&quot; href=&quot;twid.css&quot; /&gt;
-	&lt;title&gt;This Week in D: January 18, 2015&lt;/title&gt;
-	&lt;/head&gt;&lt;body&gt;
+		</description></item><item><title>Issue #2</title><author>destructionator+dweek@gmail.com (Adam D. Ruppe)</author><link>http://arsdnet.net/this-week-in-d/jan-18.html</link><guid>http://arsdnet.net/this-week-in-d/jan-18.html</guid><pubDate>Sun, 18 Jan 2015 12:00:00 GMT</pubDate><description>
 		&lt;div id=&quot;body-container&quot;&gt;
 			&lt;h1&gt;
 			&lt;img class=&quot;d-logo&quot; src=&quot;http://dlang.org/images/dlogo.png&quot; /&gt;
@@ -385,4 +377,4 @@
 
 
 		&lt;/div&gt;
-	&lt;/body&gt;&lt;/html&gt;</description></item></channel></rss>
+	</description></item></channel></rss>

@@ -5,7 +5,7 @@ import std.algorithm;
 
 void main() {
 	auto rss = new Document(`<?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0"></rss>`, true, true);
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"></rss>`, true, true);
 
 	rss.setProlog = "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n";
 
@@ -13,8 +13,13 @@ void main() {
 
 	channel.addChild("title", "This Week in D");
 	channel.addChild("description", "A weekly newsletter about what's going on in the D Programming Language");
-	channel.addChild("link", "http://arsdnet.net/this-week-in-d/");
+	auto thisLink = "http://arsdnet.net/this-week-in-d/";
+	channel.addChild("link").innerText = thisLink;
 	channel.addChild("ttl", "5000");
+	auto al = channel.addChild("atom:link");
+	al.href = thisLink ~ "twid.rss";
+	al.rel = "self";
+	al.type = "application/rss+xml";
 
 	// this is updated below too
 	channel.addChild("lastBuildDate", "Mon, 19 Jan 2015 12:00:00 -0400");
@@ -29,8 +34,10 @@ void main() {
 	foreach(DirEntry e; dirEntries("../web", "*.html", SpanMode.shallow)) {
 		auto item = new Element("item");
 		item.addChild("title", "placeholder");
-		item.addChild("author", "destructionator+dweek@gmail.com");
-		item.addChild("link", format("http://arsdnet.net/this-week-in-d/%s", e.name["../web/".length .. $]));
+		item.addChild("author", "destructionator+dweek@gmail.com (Adam D. Ruppe)");
+		auto permalink = format("http://arsdnet.net/this-week-in-d/%s", e.name["../web/".length .. $]);
+		item.addChild("link").innerText = permalink;
+		item.addChild("guid", permalink);
 
 		auto entry = new Document(std.file.readText(e.name));
 		auto date = entry.requireSelector("#title-date").innerText;
@@ -41,10 +48,9 @@ void main() {
 		dt.hour = 12;
 		item.addChild("pubDate", dt.printDate());
 
-		entry.setProlog(""); // IE doesn't like DTDs embedded in here
-		item.addChild("description", entry.toString());
+		item.addChild("description", entry.mainBody.innerHTML);
 
-		channel.requireSelector("lastBuildDate").innerText = dt.toISOExtString();
+		channel.requireSelector("lastBuildDate").innerText = dt.printDate();
 
 		items ~= Item(item, dt);
 	}
