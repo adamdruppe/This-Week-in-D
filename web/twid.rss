@@ -1,21 +1,388 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
-<channel>
-	<title>This Week in D</title>
-	<description>A weekly newsletter about what's going on in the D Programming Language</description>
-	<link>http://arsdnet.net/this-week-in-d/</link>
-	<lastBuildDate>Mon, 12 Jan 2015 22:00:00 -0400</lastBuildDate>
-	<pubDate>Mon, 12 Jan 2015 22:00:00 -0400</pubDate>
-	<ttl>5000</ttl>
+<rss version="2.0"><channel><title>This Week in D</title><description>A weekly newsletter about what's going on in the D Programming Language</description><link href="http://arsdnet.net/this-week-in-d/" /><ttl>5000</ttl><lastBuildDate>2015-01-12T12:00:00</lastBuildDate><item><title>Issue #1</title><author>destructionator+dweek@gmail.com</author><link href="http://arsdnet.net/this-week-in-d/jan-12.html" /><pubDate>Mon, 12 Jan 2015 12:00:00 GMT</pubDate><description>&lt;html&gt;&lt;head&gt;
+		&lt;meta charset=&quot;UTF-8&quot; /&gt;
+		&lt;link rel=&quot;stylesheet&quot; href=&quot;twid.css&quot; /&gt;
+		&lt;title&gt;This Week in D: January 12, 2015&lt;/title&gt;
+		&lt;/head&gt;&lt;body&gt;
+			&lt;div id=&quot;body-container&quot;&gt;
+				&lt;h1&gt;
+				&lt;img class=&quot;d-logo&quot; src=&quot;http://dlang.org/images/dlogo.png&quot; /&gt;
+				This Week in D: &lt;span id=&quot;title-date&quot;&gt;January 12, 2015&lt;/span&gt;&lt;/h1&gt;
+				
 
-	<item>
-		<title>Issue #1</title>
-		<author>destructionator+dweek@gmail.com</author>
-		<description>First issue of This Week in D</description>
-		<link>http://arsdnet.net/this-week-in-d/jan-12.html</link>
-		<guid isPermaLink="false">http://arsdnet.net/this-week-in-d/jan-12.html</guid>
-		<pubDate>Mon, 12 Jan 2015 22:00:00 -0400</pubDate>
-	</item>
 
-</channel>
-</rss>
+
+
+&lt;p&gt;Welcome to &lt;i&gt;This Week in D&lt;/i&gt;! Each week, we'll summarize what's been going on in the D community and write brief advice columns to help you get the most out of the D Programming Language.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://dlang.org/&quot;&gt;The D Programming Language&lt;/a&gt; is a general purpose programming language that offers modern convenience, modeling power, and native efficiency with a familiar C-style syntax.&lt;/p&gt;
+
+&lt;p&gt;This is the first edition of &lt;i&gt;This Week in D&lt;/i&gt; and we're looking for help and feedback. Any suggestions for style, visual design, or content are welcome!&lt;/p&gt;
+
+&lt;p&gt;&lt;i&gt;This Week in D&lt;/i&gt; is edited by &lt;a href=&quot;mailto:destructionator+dweek@gmail.com&quot;&gt;Adam D. Ruppe&lt;/a&gt;. Contact me with any questions, comments, or contributions.&lt;/p&gt;
+
+&lt;h2&gt;Statistics&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;	&lt;a href=&quot;https://issues.dlang.org/buglist.cgi?list_id=179422&amp;amp;resolution=FIXED&amp;amp;chfieldto=2015-01-11&amp;amp;chfield=bug_status&amp;amp;query_format=advanced&amp;amp;chfieldfrom=2015-01-04&amp;amp;chfieldvalue=RESOLVED&amp;amp;bug_status=RESOLVED&quot;&gt;22 bugs fixed&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;https://issues.dlang.org/buglist.cgi?list_id=179423&amp;amp;resolution=---&amp;amp;chfieldto=2015-01-11&amp;amp;chfield=[Bug%20creation]&amp;amp;query_format=advanced&amp;amp;chfieldfrom=2015-01-04&amp;amp;bug_status=NEW&quot;&gt;25 bugs added&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+			91 pull requests merged into the language:
+
+		&lt;a href=&quot;https://github.com/D-Programming-Language/dmd/pulls?q=is%3Apr+is%3Amerged+updated%3A2015-01-04..2015-01-15&quot;&gt;41 into DMD&lt;/a&gt;,
+		&lt;a href=&quot;https://github.com/D-Programming-Language/phobos/pulls?q=is%3Apr+is%3Amerged+updated%3A2015-01-04..2015-01-15&quot;&gt;31 into Phobos&lt;/a&gt;, and
+		&lt;a href=&quot;https://github.com/D-Programming-Language/druntime/pulls?q=is%3Apr+is%3Amerged+updated%3A2015-01-04..2015-01-15&quot;&gt;18 into druntime &lt;/a&gt;.
+&lt;/li&gt;&lt;/ul&gt;
+
+&lt;h2&gt;Major Changes&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;	DDoc in git master dmd now supports &lt;tt&gt;backticked inline code&lt;/tt&gt; with escaping.&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;		https://github.com/D-Programming-Language/dlang.org/commit/1a0ee6b81aca5f768f78108b1b9300633bddf18f&quot;&gt;		The garbage collector can now be configured through the command line, the environment or by options embedded into the executable.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;tt&gt;volatileLoad&lt;/tt&gt; and &lt;tt&gt;volatileStore&lt;/tt&gt; intrinsics were added.&lt;/li&gt;&lt;li&gt;
+	Built-in associative arrays now have a &lt;tt&gt;.byKeyValue&lt;/tt&gt; method that returns a forward range iterating over key/value pairs.
+&lt;/li&gt;&lt;/ul&gt;
+&lt;h2&gt;Project Spotlight&lt;/h2&gt;
+	&lt;p&gt;The spotlight this week is on this publication, &lt;a href=&quot;http://arsdnet.net/this-week-in-d/&quot;&gt;&lt;i&gt;This Week in D&lt;/i&gt;&lt;/a&gt;.&lt;/p&gt;
+	&lt;p&gt;&lt;i&gt;This Week in D&lt;/i&gt; is written in &lt;a href=&quot;http://dlang.org/ddoc.html&quot;&gt;Ddoc&lt;/a&gt; and is about all things D, with the blessing of Walter Bright and Andrei Alexandrescu. It is a new project, and thus may still be a little rough around the edges - contributions are always welcome.&lt;/p&gt;
+
+	&lt;p&gt;It wants to be more than just a collection of statistics and links. &lt;i&gt;This Week in D&lt;/i&gt; should be an interesting read for casual observers and experienced D users alike, with a weekly tip column and project spotlight from me or the community to help get the word out about what you're working in on D.&lt;/p&gt;
+
+	&lt;p&gt;&lt;i&gt;This Week in D&lt;/i&gt; keeps its reader appraised about what's going on in D's whole ecosystem!&lt;/p&gt;
+
+	&lt;p&gt;Want your project featured here? Prepare a link and write up a few paragraphs about it, then &lt;a href=&quot;mailto:destructionator+dweek@gmail.com&quot;&gt;contact me&lt;/a&gt;! Your project does not have to be complete to be featured - we like works-in-progress too.&lt;/p&gt;
+
+&lt;h2&gt;In the community&lt;/h2&gt;
+
+&lt;h3&gt;DConf 2015 announced!&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://dconf.org/2015/index.html&quot;&gt;DConf 2015&lt;/a&gt; will be held at Utah Valley University in Orem, Utah, from May 27, 2015 through May 29, 2015!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://forum.dlang.org/thread/m8pg3j$26ba$1@digitalmars.com&quot;&gt;UVU is sponsoring DConf 2015&lt;/a&gt; and the conference organizers are &lt;a href=&quot;http://dconf.org/2015/index.html&quot;&gt;looking for talk submissions now&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hope to see you there!&lt;/p&gt;
+
+&lt;h3&gt;Community announcements&lt;/h3&gt;
+
+&lt;ul&gt;&lt;li&gt;
+	&lt;a href=&quot;http://forum.dlang.org/thread/weodkqwxrqetvolhbghb@forum.dlang.org&quot;&gt;GCCJIT Bindings for D&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;http://forum.dlang.org/thread/ywtsrevlfecerpopjiig@forum.dlang.org&quot;&gt;Bindings for libmRSS: for parsing, writing and creating RSS/ATOM files or streams.&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;http://forum.dlang.org/thread/hapeegrotkazppwdnstk@forum.dlang.org&quot;&gt;DOtherSide: QML bindings for both D and Nim&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;http://forum.dlang.org/thread/baffupjujyjremacoxky@forum.dlang.org&quot;&gt;Gource visualisations of various D repositories&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;http://forum.dlang.org/thread/fhixatmgqeymkepvlior@forum.dlang.org&quot;&gt;D bindings and high level wrapper for systemd journal&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;http://forum.dlang.org/thread/m8bdul$1dke$1@digitalmars.com&quot;&gt;DMD's lexer available on code.dlang.org&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;http://forum.dlang.org/thread/szqsscsvcbpjjeelkpve@forum.dlang.org&quot;&gt;DlangUI project update&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;http://forum.dlang.org/thread/m8ibci$f8t$1@digitalmars.com&quot;&gt;Sargon library gets Ddoc macro processor&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;http://forum.dlang.org/thread/eycxjdxgsraxtobkeijt@forum.dlang.org&quot;&gt;We're looking for a Software Developer! (D language)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;http://forum.dlang.org/thread/m84g13$ci1$1@digitalmars.com&quot;&gt;Visual D 0.3.40 released&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;http://forum.dlang.org/thread/pzbudftwgbdptnseonmy@forum.dlang.org&quot;&gt;&amp;#8709;MQD 1.0.0-alpha released - now with full &amp;#8709;MQ 4.0 support&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;http://forum.dlang.org/thread/sqcqenpkxufgjxzraonp@forum.dlang.org&quot;&gt;We're looking for a Linux Systems Admin!&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;http://forum.dlang.org/thread/zbqcagfbicgsjgrfxcdx@forum.dlang.org&quot;&gt;D port of the Dynamic Window Manager (DWM)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;http://forum.dlang.org/thread/avvtftyekvfrqsmdiuup@forum.dlang.org&quot;&gt;D idioms list&lt;/a&gt;
+
+&lt;/li&gt;&lt;/ul&gt;
+
+	&lt;p&gt;See more at &lt;a href=&quot;http://forum.dlang.org/group/digitalmars.D.announce&quot;&gt;digitalmars.D.announce&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Significant Forum Discussions&lt;/h3&gt;
+
+	&lt;ul&gt;&lt;li&gt;		&lt;a href=&quot;http://forum.dlang.org/thread/tqegmjcofcnwapqitrdo@forum.dlang.org&quot;&gt;For those ready to take the challenge&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+		&lt;a href=&quot;http://forum.dlang.org/thread/m7ns90$16t1$1@digitalmars.com&quot;&gt;DIP25 - ref revamp proposal&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+		&lt;a href=&quot;http://forum.dlang.org/thread/mailman.3926.1420094321.9932.digitalmars-d@puremagic.com&quot;&gt;Phobos colour module?&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+		&lt;a href=&quot;http://forum.dlang.org/thread/mailman.4367.1420795702.9932.digitalmars-d@puremagic.com&quot;&gt;NaCl/Emscripten&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+		&lt;a href=&quot;http://forum.dlang.org/thread/vlzwhhymkjgckgyoxlrq@forum.dlang.org&quot;&gt;@api: One attribute to rule them All&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+		&lt;a href=&quot;http://forum.dlang.org/thread/piyaqxrqkajiylfzcxut@forum.dlang.org&quot;&gt;Game development&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+		&lt;a href=&quot;http://forum.dlang.org/thread/eeywxusjhcapltfswqxz@forum.dlang.org&quot;&gt;Is it possible to collect object usage information during compilation?&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+		&lt;a href=&quot;http://forum.dlang.org/thread/okuzksqzczprvuklpzaw@forum.dlang.org&quot;&gt;An idea for commercial support for D&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+		&lt;a href=&quot;http://forum.dlang.org/thread/m8hof1$2q4o$1@digitalmars.com&quot;&gt;Ready to make page-per-item ddocs the default?&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+		&lt;a href=&quot;http://forum.dlang.org/thread/wrlasjtoazqilqcygyww@forum.dlang.org&quot;&gt;GSOC - Holiday Edition&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+		&lt;a href=&quot;http://forum.dlang.org/thread/m8s1dr$24lp$1@digitalmars.com&quot;&gt;Is anyone working on a D source code formatting tool?&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+		&lt;a href=&quot;http://forum.dlang.org/thread/dpweryxnhcrrpxmniwkm@forum.dlang.org&quot;&gt;Thoughts on replacement languages (Reddit + D)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+		&lt;a href=&quot;http://forum.dlang.org/thread/m90s0u$1a2a$1@digitalmars.com&quot;&gt;Good post about out-of-the-box experience with D&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+		&lt;a href=&quot;http://forum.dlang.org/thread/m8tkfm$ret$1@digitalmars.com&quot;&gt;Why exceptions for error handling is so important&lt;/a&gt;
+	&lt;/li&gt;&lt;/ul&gt;
+
+	&lt;p&gt;See more at &lt;a href=&quot;http://forum.dlang.org/&quot;&gt;forum.dlang.org&lt;/a&gt; and keep up with community blogs at &lt;a href=&quot;http://planet.dsource.org/&quot;&gt;Planet D&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;h2&gt;Tip of the week&lt;/h2&gt;
+
+	&lt;p&gt;This week, we'll look at how to &lt;b&gt;use a custom class allocator at the call site&lt;/b&gt;.&lt;/p&gt;
+
+	&lt;p&gt;Class objects in D are typically allocated with the &lt;tt&gt;new&lt;/tt&gt; operator:&lt;/p&gt;
+
+&lt;pre class=&quot;d_code&quot;&gt;	&lt;font color=&quot;green&quot;&gt;// classes are reference types, so they must be
+&lt;/font&gt;	&lt;font color=&quot;green&quot;&gt;// initialized. &amp;quot;MyClass c;&amp;quot;, unlike in C++, would
+&lt;/font&gt;	&lt;font color=&quot;green&quot;&gt;// leave c as null, causing a segfault when you try
+&lt;/font&gt;	&lt;font color=&quot;green&quot;&gt;// to use it.
+&lt;/font&gt;	&lt;font color=&quot;green&quot;&gt;//
+&lt;/font&gt;	&lt;font color=&quot;green&quot;&gt;// The normal way to initialize a class is with new:
+&lt;/font&gt;	MyClass c = &lt;font color=&quot;blue&quot;&gt;new&lt;/font&gt; MyClass(args...);
+&lt;/pre&gt;
+
+	&lt;p&gt;There are times when you won't want to do that, however, such as
+	    when you are avoiding the garbage collector or wanting to use
+	    a custom allocator.&lt;/p&gt;
+
+	&lt;div class=&quot;tip&quot;&gt;You can also avoid the garbage collector in your critical loop
+	      by pre-allocating your objects before entering the main loop of
+	      your program, then reusing those objects as needed. &lt;/div&gt;
+
+	&lt;p&gt;The alternative to &lt;tt&gt;new&lt;/tt&gt; is to do it yourself: allocate the memory
+	    yourself, then call &lt;tt&gt;std.conv.emplace&lt;/tt&gt; to perform a placement new
+	    in that memory. You can allocate the memory with &lt;tt&gt;malloc&lt;/tt&gt; for C
+	    style heap memory, or as a static array to place it on the stack:&lt;/p&gt;
+
+&lt;pre class=&quot;d_code&quot;&gt;	&lt;font color=&quot;blue&quot;&gt;import&lt;/font&gt; std.conv : emplace;
+
+	&lt;font color=&quot;blue&quot;&gt;ubyte&lt;/font&gt;[&lt;font color=&quot;blue&quot;&gt;__traits&lt;/font&gt;(classInstanceSize, YourClass)] buffer;
+
+	YourClass obj = emplace!YourClass(buffer[], ctor args...);
+	&lt;font color=&quot;green&quot;&gt;// Destroy the object explicitly at scope exit, which will
+&lt;/font&gt;	&lt;font color=&quot;green&quot;&gt;// call the destructor deterministically.
+&lt;/font&gt;	&lt;font color=&quot;blue&quot;&gt;scope&lt;/font&gt;(exit) .destroy(obj);
+
+	&lt;font color=&quot;green&quot;&gt;// use obj normally here
+&lt;/font&gt;&lt;/pre&gt;
+
+	&lt;p&gt;The &lt;tt&gt;__traits(classInstanceSize, YourClass)&lt;/tt&gt; portion is important: it tells you the size of a class object. &lt;tt&gt;YourClass.sizeof&lt;/tt&gt; won't work because classes are reference types. It will return the size of the underlying pointer instead of the object itself!&lt;/p&gt;
+
+	&lt;p&gt;Once your memory is allocated, you can place the class there then proceed to use it normally. The static array and scope guard will imitate C++'s class behavior in D - allocated on the stack and destroyed when it goes out of scope.&lt;/p&gt;
+
+	&lt;div class=&quot;pitfall&quot;&gt;Wrapping class references in structs for automatic management 
+		  is possible, but difficult to get correct when faced with
+		  inheritance. Thus, you'll probably use regular class
+		  references. When passing them around, be sure not to store
+		  those references improperly. Without the garbage collector,
+		  you're back in the world of manual memory management, which
+		  means you are responsible to get it right yourself!&lt;/div&gt;
+
+	&lt;p&gt;Want to learn more about the library function? Check out the &lt;a href=&quot;https://github.com/D-Programming-Language/phobos/blob/master/std/conv.d#L3907&quot;&gt;&lt;tt&gt;emplace&lt;/tt&gt; source code&lt;/a&gt;.&lt;/p&gt;
+
+	
+
+	&lt;p&gt;Find more D tips at the &lt;a href=&quot;http://p0nce.github.io/d-idioms/&quot;&gt;D idioms list&lt;/a&gt; or buy my &lt;a href=&quot;https://www.packtpub.com/application-development/d-cookbook&quot;&gt;D Cookbook&lt;/a&gt; for a more in-depth examination many D tricks.&lt;/p&gt;
+
+	&lt;p&gt;If you'd like to submit a tip, &lt;a href=&quot;mailto:destructionator+dweek@gmail.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;
+
+
+
+&lt;h2&gt;New people and projects&lt;/h2&gt;
+
+	&lt;p&gt;Would you like to introduce yourself or your project? Let me know! Post to &lt;a href=&quot;http://forum.dlang.org/group/digitalmars.D.announce&quot;&gt;the D announcements forum&lt;/a&gt; or &lt;a href=&quot;mailto:destructionator+dweek@gmail.com&quot;&gt;email me privately&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Upcoming events&lt;/h2&gt;
+
+	&lt;ul&gt;&lt;li&gt;		&lt;a href=&quot;http://forum.dlang.org/thread/m8dfgb$qfv$1@digitalmars.com&quot;&gt;Walter Bright will be presenting at NWCPP on Jan 21 at Microsoft&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+		&lt;a href=&quot;http://dconf.org/&quot;&gt;DConf 2015 will be starting on May 27 in Orem, UT&lt;/a&gt;
+	&lt;/li&gt;&lt;/ul&gt;
+
+&lt;h2&gt;Learn more about D&lt;/h2&gt;
+	&lt;p&gt;To learn more about D and what's happening in D:&lt;/p&gt;
+	
+	&lt;ul&gt;&lt;li&gt;		Read &lt;a href=&quot;http://dlang.org&quot;&gt;http://dlang.org&lt;/a&gt; and the &lt;a href=&quot;http://wiki.dlang.org&quot;&gt;D wiki&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;
+		Want in-depth material? Check out the &lt;a href=&quot;http://wiki.dlang.org/Books&quot;&gt;Books on D&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;
+		Join us on IRC: channel #d on irc.freenode.net.&lt;/li&gt;&lt;li&gt;
+		Check out the &lt;a href=&quot;http://forum.dlang.org/&quot;&gt;forums&lt;/a&gt; (TIP - check out the NNTP and mailing list links under &amp;quot;Also via&amp;quot; on the forum to subscribe to email updates or access the forum with a newsgroup client!)&lt;/li&gt;&lt;li&gt;
+		Follow &lt;a href=&quot;https://twitter.com/D_Programming&quot;&gt;D Programming &lt;/a&gt; on Twitter&lt;/li&gt;&lt;li&gt;search for &lt;a href=&quot;https://twitter.com/search?q=%23dlang&amp;amp;src=typd&quot;&gt;#dlang&lt;/a&gt; on Twitter&lt;/li&gt;&lt;li&gt;and/or follow &lt;a href=&quot;https://twitter.com/adamdruppe&quot;&gt;&lt;i&gt;This Week in D&lt;/i&gt;'s editor on Twitter&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;
+		Check out the &lt;a href=&quot;http://stackoverflow.com/questions/tagged/d&quot;&gt;D tag on Stack Overflow&lt;/a&gt;
+	&lt;/li&gt;&lt;/ul&gt;
+
+
+			&lt;/div&gt;
+		&lt;/body&gt;&lt;/html&gt;</description></item><item><title>Issue #2</title><author>destructionator+dweek@gmail.com</author><link href="http://arsdnet.net/this-week-in-d/jan-18.html" /><pubDate>Sun, 18 Jan 2015 12:00:00 GMT</pubDate><description>&lt;html&gt;&lt;head&gt;
+	&lt;meta charset=&quot;UTF-8&quot; /&gt;
+	&lt;link rel=&quot;stylesheet&quot; href=&quot;twid.css&quot; /&gt;
+	&lt;title&gt;This Week in D: January 18, 2015&lt;/title&gt;
+	&lt;/head&gt;&lt;body&gt;
+		&lt;div id=&quot;body-container&quot;&gt;
+			&lt;h1&gt;
+			&lt;img class=&quot;d-logo&quot; src=&quot;http://dlang.org/images/dlogo.png&quot; /&gt;
+			&lt;span id=&quot;title-text&quot;&gt;This Week in D
+			&lt;span id=&quot;title-date&quot;&gt;January 18, 2015&lt;/span&gt;&lt;/span&gt;&lt;/h1&gt;
+			
+
+
+&lt;div id=&quot;preface&quot;&gt;
+
+	&lt;p&gt;Welcome to &lt;i&gt;This Week in D&lt;/i&gt;! Each week, we'll summarize what's been going on in the D community and write brief advice columns to help you get the most out of the D Programming Language.&lt;/p&gt;
+
+	&lt;p&gt;&lt;a href=&quot;http://dlang.org/&quot;&gt;The D Programming Language&lt;/a&gt; is a general purpose programming language that offers modern convenience, modeling power, and native efficiency with a familiar C-style syntax.&lt;/p&gt;
+
+	&lt;p&gt;&lt;i&gt;This Week in D&lt;/i&gt; is edited by &lt;a href=&quot;mailto:destructionator+dweek@gmail.com&quot;&gt;Adam D. Ruppe&lt;/a&gt;. Contact me with any questions, comments, or contributions.&lt;/p&gt;
+
+		&lt;p&gt;It hasn't been a full week since the last edition because it was late. From here on, we'll be shooting for a weekend write-up each week.&lt;/p&gt;
+
+	&lt;p&gt;&lt;i&gt;This Week in D&lt;/i&gt; is in the process of being hosted at dlang.org. Starting soon, you'll be able to find this publication there.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;h2&gt;Events happening in the coming week&lt;/h2&gt;
+
+	&lt;p&gt;&lt;a href=&quot;http://forum.dlang.org/thread/m8dfgb$qfv$1@digitalmars.com&quot;&gt;Walter Bright will be presenting at NWCPP on Jan 21 at Microsoft&lt;/a&gt;!&lt;/p&gt;
+
+	&lt;p&gt;&lt;a href=&quot;http://www.meetup.com/D-Lang-Sillicon-Valley/events/219413448/&quot;&gt;D: What's Cooking in 2015 by Andrei Alexandrescu on Thursday, January 22&lt;/a&gt;&lt;/p&gt;
+
+	&lt;p&gt;&lt;a href=&quot;http://forum.dlang.org/thread/fmrbdctphazhgikjhoyc@forum.dlang.org&quot;&gt;Berlin Meetup: Friday the 23rd of January from 17:00 to 19:30 at the Melbourne Cantee&lt;/a&gt;&lt;/p&gt;
+
+
+&lt;h2&gt;Statistics&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;	&lt;a href=&quot;https://issues.dlang.org/buglist.cgi?bug_status=RESOLVED&amp;amp;chfield=bug_status&amp;amp;chfieldfrom=2015-01-12&amp;amp;chfieldto=2015-01-18&amp;amp;chfieldvalue=RESOLVED&amp;amp;list_id=179422&amp;amp;query_format=advanced&amp;amp;resolution=FIXED&quot;&gt;20 bugs fixed&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;https://issues.dlang.org/buglist.cgi?bug_status=NEW&amp;amp;chfield=%5BBug%20creation%5D&amp;amp;chfieldfrom=2015-01-12&amp;amp;chfieldto=2015-01-18&amp;amp;list_id=179423&amp;amp;query_format=advanced&amp;amp;resolution=---&quot;&gt;31 bugs and enhancement requests opened&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+			43 pull requests merged into the language:
+
+		&lt;a href=&quot;https://github.com/D-Programming-Language/dmd/pulls?q=is%3Apr+is%3Amerged+merged%3A2015-01-12..2015-01-18&quot;&gt;26 into DMD&lt;/a&gt;,
+		&lt;a href=&quot;https://github.com/D-Programming-Language/phobos/pulls?q=is%3Apr+is%3Amerged+merged%3A2015-01-12..2015-01-18&quot;&gt;7 into Phobos&lt;/a&gt;, and
+		&lt;a href=&quot;https://github.com/D-Programming-Language/druntime/pulls?q=is%3Apr+is%3Amerged+merged%3A2015-01-12..2015-01-18&quot;&gt;10 into druntime &lt;/a&gt;.&lt;/li&gt;&lt;li&gt;
+	&lt;a href=&quot;https://github.com/D-Programming-Language/dlang.org/pulls?q=is%3Apr+is%3Amerged+merged%3A2015-01-12..2015-01-18&quot;&gt;21 pull requests merged into the website.&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;
+
+&lt;h2&gt;Major Changes&lt;/h2&gt;
+
+&lt;ul&gt;&lt;li&gt;	&lt;a href=&quot;https://github.com/D-Programming-Language/druntime/pull/864&quot;&gt;The GC will now call destructors on heap allocated structs&lt;/a&gt;&lt;/li&gt;&lt;li&gt;	
+	&lt;a href=&quot;http://forum.dlang.org/thread/m9c0i5$rva$1@digitalmars.com&quot;&gt;DIP25 (sealed references) has been preliminarily approved for 2.067&lt;/a&gt;&lt;/li&gt;&lt;li&gt;	The website is currently undergoing an overhaul, cleaning up CSS to enable a new style, add responsiveness for mobile devices, and more.
+&lt;/li&gt;&lt;/ul&gt;
+
+
+
+&lt;h2&gt;In the community&lt;/h2&gt;
+
+&lt;h3&gt;DConf 2015&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://forum.dlang.org/thread/m93sj6$19l1$1@digitalmars.com&quot;&gt;Chuck Allison to deliver keynote&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://forum.dlang.org/thread/m8hqr3$2tmh$1@digitalmars.com&quot;&gt;Call for Submissions is still open!&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://forum.dlang.org/thread/m96mts$19mf$1@digitalmars.com&quot;&gt;DConf 2015 discounted hotel rooms now available&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://forum.dlang.org/thread/m9h25q$2gdf$1@digitalmars.com&quot;&gt;Thanks to p0nce for a nicer DConf logo!&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hope to see you there!&lt;/p&gt;
+
+&lt;h3&gt;Community announcements&lt;/h3&gt;
+
+&lt;ul&gt;&lt;li&gt;	&lt;a href=&quot;http://forum.dlang.org/thread/zpfomhmfezpnomvxnrex@forum.dlang.org&quot;&gt;Atmosphere GM - Statistical package&lt;/a&gt;&lt;/li&gt;&lt;li&gt;	&lt;a href=&quot;http://forum.dlang.org/thread/rvoqllpimfskvlabprot@forum.dlang.org&quot;&gt;Binutils 2.25 Released - New D demangling support&lt;/a&gt;&lt;/li&gt;&lt;li&gt;	&lt;a href=&quot;http://forum.dlang.org/thread/clhfgdcsjcsgpcwcajdt@forum.dlang.org&quot;&gt;Anyone interested in embedding a JVM in their D app?&lt;/a&gt;&lt;/li&gt;&lt;li&gt;	&lt;a href=&quot;http://forum.dlang.org/thread/aakkjhuzubfwuyrdnruf@forum.dlang.org&quot;&gt;My LLVM talk @ FOSDEM'15&lt;/a&gt;&lt;/li&gt;&lt;li&gt;	&lt;a href=&quot;http://forum.dlang.org/thread/gtbgitgjnelylyfijcvc@forum.dlang.org&quot;&gt;trimcheck, dhcptest, RABCDAsm&lt;/a&gt;&lt;/li&gt;&lt;li&gt;	&lt;a href=&quot;http://forum.dlang.org/thread/ggykowbqwpiuxulpjacf@forum.dlang.org&quot;&gt;typescript plugin for vibe.d diet templates&lt;/a&gt;&lt;/li&gt;&lt;li&gt;	&lt;a href=&quot;http://forum.dlang.org/thread/qdydtnaylqrcrhnusgko@forum.dlang.org&quot;&gt;Heady House Hunting with D&lt;/a&gt;&lt;/li&gt;&lt;li&gt;	&lt;a href=&quot;http://forum.dlang.org/thread/efaasmuhbigqxnotzoqi@forum.dlang.org&quot;&gt;Deadcode: A code editor in D&lt;/a&gt;
+
+&lt;/li&gt;&lt;/ul&gt;
+
+	&lt;p&gt;See more at &lt;a href=&quot;http://forum.dlang.org/group/digitalmars.D.announce&quot;&gt;digitalmars.D.announce&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;Significant Forum Discussions&lt;/h3&gt;
+
+	&lt;p&gt;Since the last issue of &lt;i&gt;This Week in D&lt;/i&gt;, the forum has been dominated by discussions on website and associated process improvements.&lt;/p&gt;
+
+	&lt;p&gt;However, that wasn't everything - there were also discussions on new DIPs (D Improvement Proposals), targeting game consoles, and other items.&lt;/p&gt;
+
+	&lt;ul&gt;&lt;li&gt;		&lt;a href=&quot;http://forum.dlang.org/thread/bqtcdpsopxmnfbjyrrzf@forum.dlang.org&quot;&gt;D Beginner Trying Manual Memory Management&lt;/a&gt;&lt;/li&gt;&lt;li&gt;		&lt;a href=&quot;http://forum.dlang.org/thread/zexuqeqdmawbqajrhbri@forum.dlang.org&quot;&gt;Can D get on XBone and PS4?&lt;/a&gt;&lt;/li&gt;&lt;li&gt;
+		&lt;a href=&quot;http://forum.dlang.org/thread/m9497d$1pv2$1@digitalmars.com&quot;&gt;Common makefile (gasp) stuff&lt;/a&gt;&lt;/li&gt;&lt;li&gt;		&lt;a href=&quot;http://forum.dlang.org/thread/m9a3il$21k0$1@digitalmars.com&quot;&gt;10 Tips for Better Pull Requests&lt;/a&gt;&lt;/li&gt;&lt;li&gt;		&lt;a href=&quot;http://forum.dlang.org/thread/m9btie$pcl$1@digitalmars.com&quot;&gt;[WORK] Backtick dat code?&lt;/a&gt;&lt;/li&gt;&lt;li&gt;		&lt;a href=&quot;http://forum.dlang.org/thread/pknqugxoxcvxkmdyvgzu@forum.dlang.org&quot;&gt;post qualifier and template constraint limitation, is there a reason ?&lt;/a&gt;&lt;/li&gt;&lt;li&gt;		&lt;a href=&quot;http://forum.dlang.org/thread/m9ahpj$2i3v$1@digitalmars.com&quot;&gt;dlang.org should do it in style&lt;/a&gt;&lt;/li&gt;&lt;li&gt;		&lt;a href=&quot;http://forum.dlang.org/thread/m9e6br$2sa5$1@digitalmars.com&quot;&gt;Eliminate comparison.html?&lt;/a&gt;&lt;/li&gt;&lt;li&gt;		&lt;a href=&quot;http://forum.dlang.org/thread/m9bien$dvv$1@digitalmars.com&quot;&gt;css minification&lt;/a&gt;&lt;/li&gt;&lt;li&gt;		&lt;a href=&quot;http://forum.dlang.org/thread/xjhvpmjrlwhhgeqyoipv@forum.dlang.org&quot;&gt;DIP71: 'noscope' and 'out!param' attributes&lt;/a&gt;&lt;/li&gt;&lt;li&gt;		&lt;a href=&quot;http://forum.dlang.org/thread/m9f558$lbb$1@digitalmars.com&quot;&gt;Please help me with improving dlang.org&lt;/a&gt;&lt;/li&gt;&lt;li&gt;		&lt;a href=&quot;http://forum.dlang.org/thread/fteqqezulxncraehycfv@forum.dlang.org&quot;&gt;Writing a small linux binary&lt;/a&gt;
+	&lt;/li&gt;&lt;/ul&gt;
+
+	&lt;p&gt;See more at &lt;a href=&quot;http://forum.dlang.org/&quot;&gt;forum.dlang.org&lt;/a&gt; and keep up with community blogs at &lt;a href=&quot;http://planet.dsource.org/&quot;&gt;Planet D&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;From the past&lt;/h3&gt;
+	&lt;p&gt;In March 2014, Cybershadow wrote a post about &lt;a href=&quot;http://blog.thecybershadow.net/2014/03/21/functional-image-processing-in-d/&quot;&gt;Functional Image Processing in D&lt;/a&gt;. This post demonstrates how to use D's templates and other features to make efficient and elegant code for working with images of various color layouts.&lt;/p&gt;
+
+&lt;h2&gt;FAQs&lt;/h2&gt;
+
+	&lt;p&gt;I wrote about &lt;a href=&quot;http://stackoverflow.com/a/27947350/1457000&quot;&gt;HTML parsing on Stack Overflow&lt;/a&gt; again this week, demonstrating how to use my dom.d library to do web scraping.&lt;/p&gt;
+
+	&lt;p&gt;The &lt;a href=&quot;http://p0nce.github.io/d-idioms/&quot;&gt;D Idioms List&lt;/a&gt; got new entries:&lt;/p&gt;
+	&lt;ul&gt;&lt;li&gt;		&lt;a href=&quot;http://p0nce.github.io/d-idioms/#Porting-from-C-gotchas&quot;&gt;Porting from C gotchas&lt;/a&gt;&lt;/li&gt;&lt;li&gt;		&lt;a href=&quot;http://p0nce.github.io/d-idioms/#Phobos-gems&quot;&gt;Phobos gems&lt;/a&gt;&lt;/li&gt;&lt;li&gt;		&lt;a href=&quot;http://p0nce.github.io/d-idioms/#Linking-with-C-gotchas&quot;&gt;Linking with C gotchas&lt;/a&gt;&lt;/li&gt;&lt;li&gt;		&lt;a href=&quot;http://p0nce.github.io/d-idioms/#if-embedded-declaration&quot;&gt;if embedded declarations&lt;/a&gt;&lt;/li&gt;&lt;li&gt;		&lt;a href=&quot;http://p0nce.github.io/d-idioms/#Falsey-values&quot;&gt;falsey values&lt;/a&gt;&lt;/li&gt;&lt;li&gt;		&lt;a href=&quot;http://p0nce.github.io/d-idioms/#Enumerate-fields-with-__traits%28allMembers%29&quot;&gt;Enumerate fields with __traits&lt;/a&gt;&lt;/li&gt;&lt;li&gt;		&lt;a href=&quot;http://p0nce.github.io/d-idioms/#assert%28false%29-is-special&quot;&gt;assert(false) is special&lt;/a&gt;
+	&lt;/li&gt;&lt;/ul&gt;
+
+&lt;h2&gt;Tip of the week&lt;/h2&gt;
+
+	&lt;p&gt;This week, we'll look at &lt;b&gt;UFCS, &lt;a href=&quot;http://dlang.org/function.html#pseudo-member&quot;&gt;Uniform Function Call Syntax&lt;/a&gt;&lt;/b&gt; to write extension methods to types and &lt;a href=&quot;http://www.drdobbs.com/cpp/how-non-member-functions-improve-encapsu/184401197&quot;&gt;help improve encapsulation&lt;/a&gt;.&lt;/p&gt;
+
+	&lt;p&gt;D, when encountering &lt;tt&gt;obj.func(args...)&lt;/tt&gt;, will first attempt a member lookup. Member lookup includes direct methods, inherited methods, &lt;tt&gt;alias this&lt;/tt&gt; members, and &lt;tt&gt;opDispatch&lt;/tt&gt;, and &lt;tt&gt;opDot&lt;/tt&gt; rewriting. If none of those succeed, the compiler will attempt to rewrite the expression into &lt;tt&gt;func(obj, args...)&lt;/tt&gt; and compile that.&lt;/p&gt;
+
+	&lt;div class=&quot;pitfall&quot;&gt;		UFCS does &lt;i&gt;not&lt;/i&gt; look at nested functions:
+&lt;pre class=&quot;d_code&quot;&gt;	&lt;font color=&quot;blue&quot;&gt;void&lt;/font&gt; foo() {
+		&lt;font color=&quot;blue&quot;&gt;void&lt;/font&gt; bar(Object obj) { }
+		obj.bar(); &lt;font color=&quot;green&quot;&gt;// won't work because bar is a local symbol
+&lt;/font&gt;	}
+&lt;/pre&gt;
+
+		To use a function with UFCS, it must be defined at module scope:
+&lt;pre class=&quot;d_code&quot;&gt;	&lt;font color=&quot;blue&quot;&gt;void&lt;/font&gt; bar(Object obj) {}
+	&lt;font color=&quot;blue&quot;&gt;void&lt;/font&gt; foo() {
+		obj.bar(); &lt;font color=&quot;green&quot;&gt;// will work
+&lt;/font&gt;	}
+&lt;/pre&gt;
+	&lt;/div&gt;
+
+	&lt;p&gt;If the rewrite succeeds unambiguously, the code will compile. Any type may be extended in this fashion:&lt;/p&gt;
+
+&lt;pre class=&quot;d_code&quot;&gt;	&lt;font color=&quot;blue&quot;&gt;float&lt;/font&gt; divideBy(&lt;font color=&quot;blue&quot;&gt;float&lt;/font&gt; divisor, &lt;font color=&quot;blue&quot;&gt;float&lt;/font&gt; dividend) {
+		&lt;font color=&quot;blue&quot;&gt;return&lt;/font&gt; divisor / dividend;
+	}
+
+	&lt;font color=&quot;blue&quot;&gt;void&lt;/font&gt; main() {
+		&lt;font color=&quot;blue&quot;&gt;float&lt;/font&gt; a = 5.divideBy(2); &lt;font color=&quot;green&quot;&gt;// works on built-in types too!
+&lt;/font&gt;		&lt;font color=&quot;green&quot;&gt;// rewrites into a = divideBy(5, 2);
+&lt;/font&gt;		&lt;font color=&quot;blue&quot;&gt;assert&lt;/font&gt;(a == 2.5);
+	}
+&lt;/pre&gt;
+
+	&lt;p&gt;UFCS is used in D for three main reasons:&lt;/p&gt;
+	&lt;ul&gt;&lt;li&gt;					Extending types you don't have direct access to, such as the &lt;tt&gt;divideBy&lt;/tt&gt; example above.
+		&lt;/li&gt;&lt;li&gt;					Writing &lt;a href=&quot;http://www.drdobbs.com/architecture-and-design/component-programming-in-d/240008321&quot;&gt;pipeline style range code&lt;/a&gt;:
+&lt;pre class=&quot;d_code&quot;&gt;	&lt;font color=&quot;blue&quot;&gt;import&lt;/font&gt; std.algorithm;
+	&lt;font color=&quot;blue&quot;&gt;void&lt;/font&gt; main() {
+		[1,2,3]
+			.filter!(isOdd)
+			.map!((a) =&amp;gt; a**2)
+			.writeln;
+	}
+&lt;/pre&gt;
+
+			None of the functions there are members of the object, but thanks to UFCS, that will compile.
+		&lt;/li&gt;&lt;li&gt;					Improving encapsulation by writing extension methods in different modules, similarly to &lt;a href=&quot;http://www.drdobbs.com/cpp/how-non-member-functions-improve-encapsu/184401197&quot;&gt;Scott Meyer's advice in C++&lt;/a&gt;. If you write methods that work on minimal interfaces, it will keep your access to the object's internals minimized, ensuring you do not depend on those details. Moreover, your extension methods will be &lt;tt&gt;final&lt;/tt&gt; - since they aren't members of the class, they are guaranteed to never be &lt;tt&gt;virtual&lt;/tt&gt;, potentially saving indirections.&lt;/li&gt;&lt;/ul&gt;
+
+	&lt;div class=&quot;tip&quot;&gt;		&lt;tt&gt;private&lt;/tt&gt; in D means something slightly different than &lt;tt&gt;private&lt;/tt&gt; in C++: in D, protection
+		works at module (source file) boundaries. All functions inside a single module can see
+		all other symbols in that module, regardless of protection level, even if they are &lt;tt&gt;private&lt;/tt&gt;
+		members from different classes.
+
+		If you want a member to only be visible to a particular class in D, put that class in its
+		own file / module.
+
+		&lt;div class=&quot;tip&quot;&gt;			D also supports the &lt;tt&gt;package&lt;/tt&gt; protection level, which allows sharing of
+			symbols in the same package - sharing the same name up until the last dot -
+			but not outside.
+
+&lt;pre class=&quot;d_code&quot;&gt;	&lt;font color=&quot;blue&quot;&gt;module&lt;/font&gt; foo.bar;
+	&lt;font color=&quot;blue&quot;&gt;package&lt;/font&gt; &lt;font color=&quot;blue&quot;&gt;int&lt;/font&gt; a;
+
+	&lt;font color=&quot;blue&quot;&gt;module&lt;/font&gt; foo.baz;
+	&lt;font color=&quot;blue&quot;&gt;import&lt;/font&gt; foo.bar;
+	&lt;font color=&quot;green&quot;&gt;// int a IS accessible
+&lt;/font&gt;
+	&lt;font color=&quot;blue&quot;&gt;module&lt;/font&gt; something.&lt;font color=&quot;blue&quot;&gt;else&lt;/font&gt;;
+	&lt;font color=&quot;blue&quot;&gt;import&lt;/font&gt; foo.bar;
+	&lt;font color=&quot;green&quot;&gt;// int a is not accessible
+&lt;/font&gt;&lt;/pre&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+
+	
+
+	&lt;p&gt;Find more D tips at the &lt;a href=&quot;http://p0nce.github.io/d-idioms/&quot;&gt;D idioms list&lt;/a&gt; or buy my &lt;a href=&quot;https://www.packtpub.com/application-development/d-cookbook&quot;&gt;D Cookbook&lt;/a&gt; for a more in-depth examination of many D tricks.&lt;/p&gt;
+
+	&lt;p&gt;If you'd like to submit a tip, &lt;a href=&quot;mailto:destructionator+dweek@gmail.com&quot;&gt;email me&lt;/a&gt;.&lt;/p&gt;
+
+
+&lt;h2&gt;Upcoming events&lt;/h2&gt;
+
+	&lt;ul&gt;		&lt;li&gt;&lt;a href=&quot;http://dconf.org/&quot;&gt;DConf 2015 will be starting on May 27 in Orem, Utah, United States&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+&lt;h2&gt;Learn more about D&lt;/h2&gt;
+	&lt;p&gt;To learn more about D and what's happening in D:&lt;/p&gt;
+	
+	&lt;ul&gt;&lt;li&gt;		Read &lt;a href=&quot;http://dlang.org&quot;&gt;http://dlang.org&lt;/a&gt; and the &lt;a href=&quot;http://wiki.dlang.org&quot;&gt;D wiki&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;
+		Want in-depth material? Check out the &lt;a href=&quot;http://wiki.dlang.org/Books&quot;&gt;Books on D&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;
+		Join us on IRC: channel #d on irc.freenode.net.&lt;/li&gt;&lt;li&gt;
+		Check out the &lt;a href=&quot;http://forum.dlang.org/&quot;&gt;forums&lt;/a&gt; (TIP - check out the NNTP and mailing list links under &amp;quot;Also via&amp;quot; on the forum to subscribe to email updates or access the forum with a newsgroup client!)&lt;/li&gt;&lt;li&gt;
+		Follow &lt;a href=&quot;https://twitter.com/D_Programming&quot;&gt;D Programming &lt;/a&gt; on Twitter&lt;/li&gt;&lt;li&gt;search for &lt;a href=&quot;https://twitter.com/search?q=%23dlang&amp;amp;src=typd&quot;&gt;#dlang&lt;/a&gt; on Twitter&lt;/li&gt;&lt;li&gt;and/or follow &lt;a href=&quot;https://twitter.com/adamdruppe&quot;&gt;&lt;i&gt;This Week in D&lt;/i&gt;'s editor on Twitter&lt;/a&gt;.&lt;/li&gt;&lt;li&gt;
+		Check out the &lt;a href=&quot;http://stackoverflow.com/questions/tagged/d&quot;&gt;D tag on Stack Overflow&lt;/a&gt;
+	&lt;/li&gt;&lt;/ul&gt;
+
+
+		&lt;/div&gt;
+	&lt;/body&gt;&lt;/html&gt;</description></item></channel></rss>

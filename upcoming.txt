@@ -1,6 +1,9 @@
 === NEXT WEEK ===
 
-http://philpax.me/blog/heady-house-hunting-with-d
+
+Notes:
+ -m32mscoff
+
 
 === BIGGER LONG TERM STUFF ===
 
@@ -20,17 +23,12 @@ Tip ideas:
 Orvid_: "Remember, `foreach (dchar c; str)` and `foreach (c; str)` do different things?" 
 	* auto decoding in phobos too
 
-sleek: uniform function call syntax is a fun one
-	* I can talk about the encapsulation thing and prolly mention
 	what `private` means too while I'm at it.
 
-html parsing - the C++ link extraction thread and dom.d
-	http://stackoverflow.com/questions/27943342/how-to-extract-only-first-match-with-regexp/27947350#27947350
-
-Actually, I think HTML counts as a bit of a FAQ, maybe I'll put
-it in there and then save room for other things.
-
 Project spotlights:
+
+
+http://forum.dlang.org/thread/pxqytmikgipfjkjexuux@forum.dlang.org?page=12#post-kxoaqsnpapopkxommajg:40forum.dlang.org
 
 I can talk about a LOT of my stuff for a long time
 	dom.d

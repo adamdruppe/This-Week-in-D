@@ -27,3 +27,9 @@ for proper publication each week instead of doing it on my computer.
 
 But development will be done here, with just the final result going
 into the dlang.org repo.
+
+
+
+To build a file, from `src/../`, run:
+
+dmd -D src/yourfile.dd src/common.ddoc -Ddweb

@@ -33,9 +33,11 @@ html, body {
 	vertical-align: middle;
 }
 
+/*
 a:visited {
 	color: green;
 }
+*/
 
 h1 {
 	border-bottom: double 3px #ccc;
@@ -43,4 +45,50 @@ h1 {
 
 h2 {
 	border-bottom: solid 1px #ccc;
+}
+
+/* css additions thanks to anonymous
+ * http://forum.dlang.org/post/dgnnklznkdufjzfijjrg@forum.dlang.org */
+
+/* Space things out. */
+body {line-height: 1.5em;}
+h1 {border-bottom: none; margin-bottom: 1.5em;}
+h2 {padding-bottom: 0.5em; margin: 1.5em 0 0.5em;}
+h3 {margin: 1.5em 0 1em;}
+h1, h2, h3 {font-weight: normal;}
+li {margin-top: 0.5em;}
+
+/* I find underlined text harder to read, so no underlines on 
+links. */
+a {text-decoration: none;}
+/* Underline on hover helps distinguish adjacent links. */
+a:hover {text-decoration: underline;}
+
+/* Style the title a bit .*/
+.d-logo {float: left;}
+#title-text {display: block; margin-left: 150px;}
+#title-date {display: block; font-size: 0.7em;}
+h1 {overflow: none; line-height: 1.3em;}
+
+/* Two columns for the preface. */
+#preface {columns: 2; -moz-columns: 2;}
+#preface p:first-child {margin-top: 0;}
+
+/* Suggestions from http://forum.dlang.org/thread/otgwmlrdhjdlbeohzpnf@forum.dlang.org?page=2#post-icfdkpytqzbsiaziygbz:40forum.dlang.org */
+
+h1, h2 {
+	background-color: #eececa;
+	color: #c9746c;
+	padding: 1em;
+	font-weight: bold;
+	margin-left: -0.25em;
+	margin-right: -0.25em;
+}
+
+h1 {
+	padding-top: 0.5em;
+}
+
+#title-text {
+	padding-top: 0.25em;
 }

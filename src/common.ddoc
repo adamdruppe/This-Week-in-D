@@ -1,0 +1,55 @@
+H2=<h2>$0</h2>
+H3=<h3>$0</h3>
+LIST=<ul><li>$1</li>$(LIST_HELPER $+)</ul>
+LIST_HELPER=<li>$1</li>$(LIST_HELPER $+)
+D=<tt>$0</tt>
+LOGO=<i>$0</i>
+DDOC=<!DOCTYPE html><html><head>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="twid.css" />
+	<title>This Week in D: $(DATE)</title>
+	</head><body>
+		<div id="body-container">
+			<h1>
+			<img class="d-logo" src="http://dlang.org/images/dlogo.png" />
+			<span id="title-text">This Week in D
+			<span id="title-date">$(DATE)</span></span></h1>
+			$(BODY)
+		</div>
+	</body></html>
+
+LITERAL=$0
+TIP=<div class="tip">$0</div>
+PITFALL=<div class="pitfall">$0</div>
+D_INLINECODE=<tt>$0</tt>
+
+INTRO=<div id="preface">$(H1 This week in the D Programming Language)
+
+	$(P Welcome to $(LOGO This Week in D)! Each week, we'll summarize what's been going on in the D community and write brief advice columns to help you get the most out of the D Programming Language.)
+
+	$(P $(LINK2 http://dlang.org/, The D Programming Language) is a general purpose programming language that offers modern convenience, modeling power, and native efficiency with a familiar C-style syntax.)
+
+	$(P $(LOGO This Week in D) is edited by $(LINK2 mailto:destructionator+dweek@gmail.com, Adam D. Ruppe). Contact me with any questions, comments, or contributions.)
+
+	$0</div>
+
+
+
+LEARNMORE=$(H2 Learn more about D)
+	$(P To learn more about D and what's happening in D:)
+	
+	$(LIST
+		Read $(LINK http://dlang.org) and the $(LINK2 http://wiki.dlang.org, D wiki).,
+
+		Want in-depth material? Check out the $(LINK2 http://wiki.dlang.org/Books, Books on D).,
+
+		Join us on IRC: channel #d on irc.freenode.net.,
+
+		Check out the $(LINK2 http://forum.dlang.org/, forums) (TIP - check out the NNTP and mailing list links under "Also via" on the forum to subscribe to email updates or access the forum with a newsgroup client!),
+
+		Follow $(LINK2 https://twitter.com/D_Programming, D Programming ) on Twitter, search for $(LINK2 https://twitter.com/search?q=%23dlang&src=typd, #dlang) on Twitter, and/or follow $(LINK2 https://twitter.com/adamdruppe, $(I This Week in D)'s editor on Twitter).,
+
+		Check out the $(LINK2 http://stackoverflow.com/questions/tagged/d, D tag on Stack Overflow)
+	)
+
+
