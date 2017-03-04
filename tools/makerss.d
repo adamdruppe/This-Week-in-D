@@ -27,6 +27,10 @@ void main() {
 	struct Item {
 		Element item;
 		DateTime date;
+		string filename;
+		Document document;
+		string permalink;
+		string title;
 	}
 
 	Item[] items;
@@ -40,6 +44,8 @@ void main() {
 		item.addChild("guid", permalink);
 
 		auto entry = new Document(std.file.readText(e.name));
+		if(auto s = entry.querySelector("#sidebar"))
+			s.removeFromTree();
 		auto date = entry.requireSelector("#title-date").innerText;
 		DateTime dt;
 		dt.month = to!Month(date[0 .. date.indexOf(" ")][0 .. 3].toLower);
@@ -52,15 +58,36 @@ void main() {
 
 		channel.requireSelector("lastBuildDate").innerText = dt.printDate();
 
-		items ~= Item(item, dt);
+		items ~= Item(item, dt, e.name, entry, permalink);
 	}
 
-	int issue = 1;
-	foreach(item; sort!"a.date < b.date"(items)) {
+	Element sidebar = Element.make("div");
+	sidebar.id = "sidebar";
+
+	sidebar.addChild("b", "Archive");
+	auto ol = sidebar.addChild("ol");
+	ol.setAttribute("reversed", "reversed");
+
+	int issue = items.length;
+	foreach(item; sort!"a.date > b.date"(items)) {
 		channel.addChild(item.item);
-		item.item.requireSelector("title").innerText = format("Issue #%d", issue);
-		issue++;
+		item.title = format("Issue #%d", issue);
+		item.item.requireSelector("title").innerText = item.title;
+		item.title ~= " " ~ item.date.printDate();
+		issue--;
+
+		ol.addChild("li", Element.make("a", item.date.printDate()[5 .. 17], item.permalink));
 	}
+
+	foreach(item; items) {
+		auto document = item.document;
+		auto sb = document.querySelector("#sidebar");
+		if(sb is null) {
+			document.mainBody.addChild(sidebar.cloned);
+		}
+		std.file.write(item.filename, document.toString);
+	}
+
 
 
 	std.file.write("../web/twid.rss", rss.toString());

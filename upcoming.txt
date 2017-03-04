@@ -1,5 +1,150 @@
+write about changes in TWID and attitudes of humility on asking questions
+
+
+
+
+
+
+
+ mixin BitPack!( typeof( { struct Data { @PackSize( 2 ) int foo; @PackSize( 5 ) int bar; } return Data.init; }() ) );
+
+
+write about mental friction
+
+
+
+Making a ref range out of as tring so oyu can do splitter
+and see the remaining stuff when you are done.
+
+
+https://gist.github.com/rikkimax/7b44be7e298d7b431e6df9462324ac3a
+
+
+
+arrays ARE ranges
+
+
+and dconf too.
+
+
+http://forum.dlang.org/post/fatqnbivseurruxsxsoh@forum.dlang.org
+
+
+
+voldemort type to pass anonymous struct as template param:
+
+foo!({
+  struct _ {
+	// fields here
+  }
+  return _();
+})
+
+
+
+
+
+mixin(__MODULE__)
+
+ template isPure(Func, Args...) { alias isPure = is(typeof((){void _() pure {Func(Args);}}))); }
+
+
+return Nullable!int(); // this works
+
+opApply, ref arguments, and overloads.
+	 Error: cannot uniquely infer foreach argument types
+adam_d_ruppe: you have to specifically ask for ref at the foreach point
+or that to eb considered
+
+* how to contribute to website
+
+Talk to UplinkCoder and deadalnix on IRC about SDC
+
+==========
+talk about inout
+==========
+
+
+
+anonymous enums
+
+template this parameters demystified
+
+
+
+Email 1892 - Re: create a delegate function
+
+twid-latest.js
+then dcode/tmixin.d 
+
+
+my todo: yawniek on irc
+
+Me on ctors:
+
+http://forum.dlang.org/thread/gtaypgbirsxckdqexfnu@forum.dlang.org#post-lsjjzbykhphlyhuxpsxm:40forum.dlang.org
+
+
 === NEXT WEEK ===
 
+FILE ENHANCEMENT REQUESTS:
+	* disable copying on all ranges
+	* allow disabling assignment on classes too
+
+
+DCONF
+
+We also were asked about the alias template arguments with basic types.
+
+
+
+
+(16:22:32) andralex: CyberShadow: around?
+(16:24:28) CyberShadow: Hi andralex
+(16:24:30) CyberShadow: How are you?
+(16:24:41) andralex: CyberShadow: better than yesterday :)
+(16:24:49) andralex: CyberShadow: you?
+(16:24:51) CyberShadow: I'm good
+(16:24:55) andralex: awes
+(16:24:55) andralex: well
+(16:24:57) CyberShadow: Got work for me?
+(16:25:06) andralex: well, not work
+(16:25:08) andralex: but FUN!
+(16:25:16) CyberShadow: I'm listening :)
+(16:25:19) andralex: I’m off the phone with Walter
+(16:25:27) andralex: and we got to a compromise
+(16:25:52) andralex: so, here’s what would be great if you could lead
+(16:26:06) andralex: 1. Collect all names ADDED to Phobos since 2.067
+(16:26:20) andralex: these are names that we have ONE shot in eternity to get right before they’re frozen
+(16:26:47) andralex: 2. Lead a community discussion on choosing the most palatable names
+(16:27:08) andralex: 3. We freeze those names in 2.068 and there’s no more discussion about them
+(16:27:22) CyberShadow: Sounds like a plan
+(16:27:29) andralex: What we want to make sure is that existing names are improved continuously and disruptively
+(16:27:42) andralex: for new names, we agree to have one good shake of the stick before freezing them
+(16:27:46) andralex: CyberShadow: are you up for this?
+(16:28:06) CyberShadow: You mean existing names are not changed disruptively?
+(16:28:16) andralex: yes, we want to avoid that
+(16:28:25) andralex: barring exceptional circumstances such as TypeTuple
+(16:28:48) CyberShadow: Sounds good, let's do it
+(16:28:55) andralex: so… there’s choice in changing the not-yet-release names, but NOT in new sweeping naming conventions that mess up everything
+(16:28:56) andralex: yay
+(16:29:12) andralex: CyberShadow: let’s 
+(16:29:13) andralex: thx!
+(16:29:25) andralex: I’m back to allocator then
+
+
+------------------------
+
+
+
+
+Maybe I should write up my Exception peeve
+
+
+JOB Openings http://forum.dlang.org/thread/bruaaidmqkodscbivmiq@forum.dlang.org
+
+
+http://wiki.dlang.org/DIP74 - reference counted classes
 
 Notes:
  -m32mscoff

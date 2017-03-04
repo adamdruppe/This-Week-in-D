@@ -92,3 +92,13 @@ h1 {
 #title-text {
 	padding-top: 0.25em;
 }
+
+@media screen and (min-width: 1150px) {
+	#sidebar {
+		position: fixed;
+		left: 1em;
+		top: 1em;
+		height: 100%;
+		overflow: auto;
+	}
+}

@@ -1,5 +1,6 @@
 H2=<h2>$0</h2>
 H3=<h3>$0</h3>
+HR=<hr />
 LIST=<ul><li>$1</li>$(LIST_HELPER $+)</ul>
 LIST_HELPER=<li>$1</li>$(LIST_HELPER $+)
 D=<tt>$0</tt>
@@ -8,6 +9,8 @@ DDOC=<!DOCTYPE html><html><head>
 	<meta charset="UTF-8" />
 	<link rel="stylesheet" href="twid.css" />
 	<title>This Week in D: $(DATE)</title>
+	<meta name=viewport content="width=device-width, initial-scale=1" />
+	<link rel="alternate" title="This Week in D RSS" href="//arsdnet.net/this-week-in-d/twid.rss" type="application/rss+xml" />
 	</head><body>
 		<div id="body-container">
 			<h1>
@@ -28,6 +31,8 @@ INTRO=<div id="preface">$(H1 This week in the D Programming Language)
 	$(P Welcome to $(LOGO This Week in D)! Each week, we'll summarize what's been going on in the D community and write brief advice columns to help you get the most out of the D Programming Language.)
 
 	$(P $(LINK2 http://dlang.org/, The D Programming Language) is a general purpose programming language that offers modern convenience, modeling power, and native efficiency with a familiar C-style syntax.)
+
+	$(P $(LOGO This Week in D) has an $(LINK2 //arsdnet.net/this-week-in-d/twid.rss, RSS feed).)
 
 	$(P $(LOGO This Week in D) is edited by $(LINK2 mailto:destructionator+dweek@gmail.com, Adam D. Ruppe). Contact me with any questions, comments, or contributions.)
 
